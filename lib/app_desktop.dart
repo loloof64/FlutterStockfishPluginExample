@@ -104,7 +104,7 @@ class AppDesktopState extends State<AppDesktop> with WindowListener {
       return;
     }
     _stockfishOutputSubsciption.cancel();
-    _stockfish.stdin = 'quitok';
+    _stockfish.stdin = 'quit';
     await Future.delayed(const Duration(milliseconds: 200));
     setState(() {});
   }

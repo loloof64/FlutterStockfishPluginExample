@@ -38,7 +38,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  flutter_stockfish_plugin: ^1.0.3
+  flutter_stockfish_plugin:
+    git: 
+      url: https://github.com/jusax23/flutter_stockfish_plugin
+      ref: 699d25c
   window_manager: ^0.3.7
 
 dev_dependencies:

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:chess/chess.dart' as chess_lib;
 
@@ -89,7 +90,7 @@ class AppMobileState extends State<AppMobile> {
       return;
     }
     _stockfishOutputSubsciption.cancel();
-    _stockfish.stdin = 'quitok';
+    _stockfish.stdin = 'quit';
     await Future.delayed(const Duration(milliseconds: 200));
     setState(() {});
   }
@@ -137,7 +138,7 @@ class AppMobileState extends State<AppMobile> {
     if (didPop) return;
     _stopStockfish();
     _stockfish.dispose();
-    Navigator.pop(context);
+    SystemNavigator.pop();
   }
 
   @override
